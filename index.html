@@ -72,6 +72,11 @@ form li {
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
 <script>
+
+$( document ).ready(function() {
+    document.domain = "party.coop";
+    console.log( "ready!" );
+});
     jQuery("#choice_248_4_0").change(function() {
   if (jQuery(this).is(":checked")) {
     jQuery('#input_248_5_1').prop('checked', true);
@@ -97,11 +102,8 @@ $("#gform_248").submit(function(event){
 	$.ajax({
 		url : post_url,
 		type: request_method,
-        dataType: "jsonp",
 		data : form_data
-	}).done(function(response){ //
-		console.log(response);
-	});
+	})
 });
 </script>  
 </body>
