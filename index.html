@@ -88,6 +88,7 @@ jQuery("#choice_248_4_1").change(function() {
 jQuery(".form-privacy").appendTo(".consent-radio .gfield_label");
 
 $("#gform_248").submit(function(event){
+    document.domain = "party.coop";
 	event.preventDefault(); //prevent default action
 	var post_url = $(this).attr("action"); //get form action url
 	var request_method = $(this).attr("method"); //get form GET/POST method
