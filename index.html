@@ -97,6 +97,7 @@ $("#gform_248").submit(function(event){
 	$.ajax({
 		url : post_url,
 		type: request_method,
+        dataType: "jsonp",
 		data : form_data
 	}).done(function(response){ //
 		console.log(response);
